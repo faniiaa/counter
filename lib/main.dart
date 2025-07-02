@@ -106,10 +106,6 @@ class Page extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text('Golhaye Ghorbat 2'),
-            Text('Golhaye Ghorbat 3'),
-            Text('Golhaye Ghorbat 4'),
-            Text('Golhaye Ghorbat 5'),
-            Text('Golhaye Ghorbat 6'),
           ],
         )),
         color: Colors.blue,
