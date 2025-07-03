@@ -102,16 +102,42 @@ class Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        child: Center(child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Text('Golhaye Ghorbat 2'),
-          ],
-        )),
-        color: Colors.blue,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25.0),
+            color: Colors.lime,
+          ),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  width: 120,
+                  height: 40,
+                  alignment: Alignment.center,
+                  child: Text('Golhaye Ghorbat',textAlign: TextAlign.center,),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.indigo,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        //color: Colors.blue,
+        height: double.infinity,
+        width: double.infinity,
+        margin: EdgeInsets.all(40),
       ),
-      color: Colors.red,
       padding: EdgeInsets.all(25),
+      margin: EdgeInsets.all(30),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(25),
+        color: Colors.red,
+      ),
     );
   }
 }
+
+class Height {}
