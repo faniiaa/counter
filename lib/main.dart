@@ -95,32 +95,35 @@ class Page extends StatelessWidget {
           color: Colors.white,
         ),
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                width: 200,
-                height: 40,
-                alignment: Alignment.center,
-                child: Text('Golhaye Ghorbat', textAlign: TextAlign.center),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Colors.indigo,
+          child: Container(
+            height: double.infinity,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //mainAxisSize: MainAxisSize.min,
+              //crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: 100,
+                  height: 40,
+                  alignment: Alignment.center,
+                  child: Text('Joje1', textAlign: TextAlign.center),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.indigo,
+                  ),
                 ),
-              ),
-              Container(
-                width: 200,
-                height: 40,
-                alignment: Alignment.center,
-                child: Text('Golhaye Ghorbat 2', textAlign: TextAlign.center),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Colors.indigo,
+                Container(
+                  width: 100,
+                  height: 40,
+                  alignment: Alignment.center,
+                  child: Text('Joje2', textAlign: TextAlign.center),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.indigo,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
