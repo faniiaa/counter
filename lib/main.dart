@@ -4,21 +4,6 @@ void main() {
   runApp(const App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -101,43 +86,44 @@ class Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: double.infinity,
+      width: double.infinity,
+      margin: EdgeInsets.all(40),
       child: Container(
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(25.0),
-            color: Colors.lime,
-          ),
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  width: 120,
-                  height: 40,
-                  alignment: Alignment.center,
-                  child: Text('Golhaye Ghorbat',textAlign: TextAlign.center,),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    color: Colors.indigo,
-                  ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(25),
+          color: Colors.white,
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: 200,
+                height: 40,
+                alignment: Alignment.center,
+                child: Text('Golhaye Ghorbat', textAlign: TextAlign.center),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.indigo,
                 ),
-              ],
-            ),
+              ),
+              Container(
+                width: 200,
+                height: 40,
+                alignment: Alignment.center,
+                child: Text('Golhaye Ghorbat 2', textAlign: TextAlign.center),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.indigo,
+                ),
+              ),
+            ],
           ),
         ),
-        //color: Colors.blue,
-        height: double.infinity,
-        width: double.infinity,
-        margin: EdgeInsets.all(40),
-      ),
-      padding: EdgeInsets.all(25),
-      margin: EdgeInsets.all(30),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(25),
-        color: Colors.red,
       ),
     );
   }
 }
-
-class Height {}
