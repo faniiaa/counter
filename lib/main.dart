@@ -73,17 +73,25 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Text('Mashgh...'),
         backgroundColor: Colors.white24,
-        leading: BackButton(),
+        //BackButton(color: Colors.blueAccent,),
+        leading: Icon(
+          Icons.notification_add, color: Colors.indigoAccent,
+        ),
       ),
       body: Container(
         padding: EdgeInsets.all(30),
         child: Stack(
           children: [
-            Image.network(
-              'https://cdn.dribbble.com/userupload/10619260/file/original-589221ed5e33f86e8ace22e9e4ed863b.jpg?resize=752x&vertical=center',
+            Image.asset(
+              'assets/images/image2.jpg',
               height: double.infinity,
               fit: BoxFit.cover,
             ),
+            Positioned(child:  Image.asset(
+              'assets/images/image1.jpg',
+              height: 137,
+              fit: BoxFit.cover,
+            ),),
             SizedBox(height: 900, child: Center(child: Text('Dream'))),
           ],
         ),
