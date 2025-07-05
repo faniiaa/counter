@@ -84,7 +84,7 @@ class Home extends StatelessWidget {
               height: double.infinity,
               fit: BoxFit.cover,
             ),
-            Center(child: Text('Dream')),
+            SizedBox(height: 900, child: Center(child: Text('Dream'))),
           ],
         ),
       ),
