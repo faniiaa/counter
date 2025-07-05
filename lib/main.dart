@@ -75,7 +75,19 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.white24,
         leading: BackButton(),
       ),
-      body: Page(),
+      body: Container(
+        padding: EdgeInsets.all(30),
+        child: Stack(
+          children: [
+            Image.network(
+              'https://cdn.dribbble.com/userupload/10619260/file/original-589221ed5e33f86e8ace22e9e4ed863b.jpg?resize=752x&vertical=center',
+              height: double.infinity,
+              fit: BoxFit.cover,
+            ),
+            Center(child: Text('Dream')),
+          ],
+        ),
+      ),
     );
   }
 }
