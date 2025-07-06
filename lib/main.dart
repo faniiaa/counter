@@ -19,10 +19,14 @@ class App extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(title: Text('Flutter Practice'), centerTitle: true),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(Icons.add),
+        ),
         bottomNavigationBar: NavigationBar(
           destinations: [
             NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-            NavigationDestination(icon: Icon(Icons.person), label: 'Profile')
+            NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
           ],
           onDestinationSelected: (int value) {},
           selectedIndex: 1,
