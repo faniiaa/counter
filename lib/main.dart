@@ -23,13 +23,20 @@ class App extends StatelessWidget {
           onPressed: () {},
           child: Icon(Icons.add),
         ),
+        drawer: Drawer(child: Column(
+          children: [
+            DrawerHeader(child: Text('Drawer menu'),),
+            ListTile(title: Text('Info'),),
+          ],
+        ),
+        ),
         bottomNavigationBar: NavigationBar(
           destinations: [
             NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
             NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
           ],
           onDestinationSelected: (int value) {},
-          selectedIndex: 1,
+          selectedIndex: 0,
         ),
       ),
     );
