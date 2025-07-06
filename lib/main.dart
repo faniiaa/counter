@@ -78,24 +78,42 @@ class Home extends StatelessWidget {
           Icons.notification_add, color: Colors.indigoAccent,
         ),
       ),
-      body: Container(
-        padding: EdgeInsets.all(30),
-        child: Stack(
-          children: [
-            Image.asset(
-              'assets/images/image2.jpg',
-              height: double.infinity,
-              fit: BoxFit.cover,
-            ),
-            Positioned(child:  Image.asset(
-              'assets/images/image1.jpg',
-              height: 137,
-              fit: BoxFit.cover,
-            ),),
-            SizedBox(height: 900, child: Center(child: Text('Dream'))),
-          ],
-        ),
-      ),
+       body: Wrap(
+         children: [
+           Text('sssssssssssoooooooommmmmmmmmmmeeeeeeeeeetttttttthhhhhhhhiiiiinng'),
+           Text('ssssoooommmmeeeetttthhhhhiiiiinng bbbbbbiiiiiiggggggggggggggggg'),
+           Text('ssssoooommmmeeeetttthhhhhiiiiinng big'),
+           Text('ssssoooommmmeeeetttthhhhhiiiiinng big'),
+
+         ],
+       )
+    // Container(
+      //   padding: EdgeInsets.all(30),
+      //   child: Stack(
+      //     children: [
+            // Image.asset(
+            //   'assets/images/image2.jpg',
+            //   height: double.infinity,
+            //   fit: BoxFit.cover,
+            // ),
+            // Positioned(child:  Image.asset(
+            //   'assets/images/image1.jpg',
+            //   height: 250,
+            //   fit: BoxFit.cover,
+            // ),),
+            // SizedBox(height: 900, child: Center(child: Text('Dream'))),
+            // ListTile(
+            //   tileColor: Colors.amber,
+            //   leading: Icon(Icons.join_full),
+            //   title: Text('Daily practice'),
+            //   trailing: Text('continue'),
+            //   onTap: () {
+            //     print('clicked on Tile');
+      //         },
+      //       )
+      //     ],
+      //   ),
+      // ),
     );
   }
 }
