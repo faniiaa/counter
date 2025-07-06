@@ -23,12 +23,14 @@ class App extends StatelessWidget {
           onPressed: () {},
           child: Icon(Icons.add),
         ),
-        drawer: Drawer(child: Column(
-          children: [
-            DrawerHeader(child: Text('Drawer menu'),),
-            ListTile(title: Text('Info'),),
-          ],
-        ),
+        drawer: SafeArea(
+          child: Drawer(child: Column(
+            children: [
+              DrawerHeader(child: Text('Drawer menu'),),
+              ListTile(title: Text('Info'),),
+            ],
+          ),
+          ),
         ),
         bottomNavigationBar: NavigationBar(
           destinations: [
