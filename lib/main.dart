@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const App());
 }
-
+String? title = 'Flutter Practice';
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -18,7 +18,7 @@ class App extends StatelessWidget {
         ),
       ),
       home: Scaffold(
-        appBar: AppBar(title: Text('Flutter Practice'), centerTitle: true),
+        appBar: AppBar(title: Text(title!), centerTitle: true),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           child: Icon(Icons.add),
