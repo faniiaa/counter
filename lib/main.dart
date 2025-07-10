@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -53,7 +54,11 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: NavigationBar(
         destinations: [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-          NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+          NavigationDestination(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+            selectedIcon: Icon(CupertinoIcons.person),
+          ),
         ],
         onDestinationSelected: (int value) {
           setState(() {
