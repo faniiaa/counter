@@ -1,71 +1,28 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:practice_flutter/widgets/navbar_widget.dart';
 
 void main() {
   runApp(const App());
 }
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
   const App({super.key});
 
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.teal,
-          brightness: Brightness.dark,
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal,brightness: Brightness.dark),
       ),
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  int currentIndex = 0;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Flutter Practice'), centerTitle: true),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
-      ),
-      drawer: SafeArea(
-        child: Drawer(
-          child: Column(
-            children: [
-              DrawerHeader(child: Text('Drawer menu')),
-              ListTile(title: Text('Info')),
-            ],
-          ),
-        ),
-      ),
-      bottomNavigationBar: NavigationBar(
-        destinations: [
-          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-          NavigationDestination(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-            selectedIcon: Icon(CupertinoIcons.person),
-          ),
-        ],
-        onDestinationSelected: (int value) {
-          setState(() {
-            currentIndex = value;
-          });
-        },
-        selectedIndex: currentIndex,
+      home: Scaffold(
+        appBar: AppBar(title: Text('Flutter Practice'),centerTitle: true,),
+        bottomNavigationBar: NavbarWidget(),
       ),
     );
   }
