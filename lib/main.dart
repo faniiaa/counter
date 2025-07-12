@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:practice_flutter/widgets/navbar_widget.dart';
+
+import 'views/widget_tree.dart';
 
 void main() {
   runApp(const App());
@@ -18,12 +19,12 @@ class _AppState extends State<App> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal,brightness: Brightness.dark),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.teal,
+          brightness: Brightness.dark,
+        ),
       ),
-      home: Scaffold(
-        appBar: AppBar(title: Text('Flutter Practice'),centerTitle: true,),
-        bottomNavigationBar: NavbarWidget(),
-      ),
+      home: WidgetTree(),
     );
   }
 }
